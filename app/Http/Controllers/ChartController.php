@@ -1,13 +1,14 @@
 <?php
-
 namespace App\Http\Controllers;
+
 use App\Charts\TamuBulananChart;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class ChartController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $chart = new TamuBulananChart;
-        return view('dashboard', ['chart' => $chart]);
+        return view('chart', compact('chart'));
     }
 }

@@ -7,18 +7,20 @@
 @endif
 <div class="card">
     <div class="card-header">
-      Data Buku Tamu <a href="{{url('admin/form-tambah')}}" class="btn btn-success">Tambah Data</a>
+      All Users 
+      {{-- <a href="{{url('admin/form-tambah')}}" class="btn btn-success">Tambah Data</a> --}}
+      <a href="{{url('export')}}" class="btn btn-success">Export To Excel</a>
     </div>
     <div class="card-body">
         <table class="table" id="myTable">
             <thead class="thead-dark">
               <tr>
-                <th scope="col">No</th>
+                <th scope="col" style="width: 3%">No</th>
                 <th scope="col">Nama</th>
-                <th scope="col">Telepon</th>
-                <th scope="col">Alamat</th>
-                <th scope="col">Email</th>
-                <th scope="col" style="width: 15%">Aksi</th>
+                <th scope="col" style="width: 5%">Telepon</th>
+                <th scope="col">Keperluan</th>
+                <th scope="col" style="width: 15%">Email</th>
+                <th scope="col" style="width: 5%">Aksi</th>
               </tr>
             </thead>
             <tbody>
@@ -34,13 +36,13 @@
                             <div class="col-4">
                               <a href="{{url('admin/form-edit', $item->id)}}" class="btn btn-warning">Edit</a>
                             </div>
-                            <div class="col-4">
+                            {{-- <div class="col-4">
                               <form action="{{url('admin/hapus-data')}}" method="post">
                                 @csrf
                                 <input type="hidden" name="id" value="{{$item->id}}">
                                 <button type="submit" class="btn btn-danger">Hapus</button>
                               </form>
-                            </div>
+                            </div> --}}
                           </div>
                             
                         </td>

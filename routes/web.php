@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\TamuController as AdminTamuController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\User\TamuController;
+use App\Http\Controllers\ChartController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,6 +13,11 @@ Route::get('/', function () {
 Route::post('simpan-bukutamu', [TamuController::class, 'simpanTamu'])->name('simpan-bukutamu');
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::get('chart', [ChartController::class, 'index']);
+
+Route::get('export', [TamuController::class, 'export']);
+
 
 
 // Bagian Admin

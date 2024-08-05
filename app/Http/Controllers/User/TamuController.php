@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class TamuController extends Controller
 {
@@ -26,5 +28,10 @@ class TamuController extends Controller
 
        return redirect('/')->with('status', 'Data Berhasil Disimpan');
 
+    }
+
+    public function export() 
+    {
+        return Excel::download(new UsersExport, 'users.xlsx');
     }
 }

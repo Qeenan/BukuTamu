@@ -25,7 +25,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-10">
                     <div class="wrap d-md-flex">
-                        <div class="img" style="background-image: url({{ url('/frontend/images/giga.jpg') }});">
+                        <div class="img" style="background-image: url({{ url('/frontend/images/rumah.jpeg') }});">
                         </div>
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
@@ -57,8 +57,8 @@
                                         placeholder="Silahkan Isi Email Anda" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="password">Alamat</label>
-                                    <textarea name="alamat" class="form-control" placeholder="Silahkan Isi Alamat Anda" cols="3"></textarea>
+                                    <label class="label" for="password">Keperluan</label>
+                                    <textarea name="alamat" class="form-control" placeholder="Silahkan Isi Keperluan Anda" cols="3"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit"
